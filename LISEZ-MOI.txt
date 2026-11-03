@@ -1,0 +1,45 @@
+FIL D'OR : atelier de couture
+=============================
+
+Contenu du dossier
+- index.html            l'application
+- sw.js                 le mode sans connexion
+- manifest.webmanifest  la fiche d'identité de l'application (nom, icône, couleurs)
+- icon.svg, icon-*.png, apple-touch-icon.png, favicon-32.png : le logo aux bons formats
+Gardez TOUS ces fichiers ensemble, dans UN SEUL dossier (sans sous-dossier).
+
+1. METTRE L'APPLICATION EN LIGNE (obligatoire pour l'installer)
+Le mode « application installable » et le mode sans connexion ne marchent que si
+l'adresse commence par https://. Ouvrir index.html directement depuis le téléphone
+ou l'ordinateur marche encore, mais sans installation ni mode sans connexion.
+
+Trois hébergements gratuits (au choix) :
+  a) Netlify    : app.netlify.com/drop  -> glisser le dossier décompressé.
+  b) Cloudflare Pages : pages.cloudflare.com -> "Créer un projet" -> envoi direct.
+  c) GitHub Pages     : déposer les fichiers dans un dépôt, puis Réglages > Pages.
+Vous obtenez une adresse en https://. Un nom de domaine personnel est facultatif
+(quelques dollars par an) et peut être ajouté plus tard.
+
+2. INSTALLER SUR UN TÉLÉPHONE
+- Android (Chrome) : ouvrir l'adresse, puis Réglages de l'appli > "Installer l'application"
+  (ou menu ⋮ > "Installer l'application").
+- iPhone (Safari)  : ouvrir l'adresse, bouton Partager > "Sur l'écran d'accueil".
+Ouvrez l'appli une première fois AVEC Internet : elle se copie dans le téléphone,
+puis marche sans connexion. Réglages > Application affiche "Fonctionne sans connexion".
+Appui long sur l'icône (Android) : raccourci "Nouvelle commande".
+
+3. DONNÉES ET SAUVEGARDE
+Les clients, commandes et photos restent dans le téléphone de l'utilisateur. Rien n'est
+envoyé sur Internet. Si le téléphone est perdu ou les données du navigateur effacées,
+elles sont perdues : exporter une sauvegarde régulièrement (Réglages > Sauvegarde).
+
+4. PUBLIER UNE NOUVELLE VERSION
+a) Remplacer les fichiers modifiés sur l'hébergement.
+b) Dans sw.js, changer la ligne :  const VERSION = "fildor-v1";   en  "fildor-v2" (puis v3...).
+c) Les utilisateurs voient « Une nouvelle version est disponible » et touchent « Mettre à jour ».
+Sans le point b), les téléphones gardent l'ancienne version.
+
+5. CE QUI N'EST PAS ENCORE LÀ
+- Pas de synchronisation entre plusieurs téléphones, ni de compte utilisateur.
+- Pas de paiement mobile money intégré.
+- Les messages WhatsApp s'ouvrent dans WhatsApp, l'utilisateur appuie sur Envoyer.
